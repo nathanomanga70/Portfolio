@@ -1,0 +1,147 @@
+/* Nathan Omanga Ndjekondo — Portfolio stylesheet
+   Identity Kit: JetBrains Mono / Inter, cobalt #1a365d, text #2d3748,
+   background #f7f9fa, action/GO green #2e7d32 */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --accent: #1a365d;
+  --text: #2d3748;
+  --bg: #f7f9fa;
+  --action: #2e7d32;
+  --rule: #d8dde3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.55;
+}
+
+h1, h2, h3, .mono {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+}
+
+a { color: var(--accent); }
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav */
+nav {
+  border-bottom: 1px solid var(--rule);
+  padding: 16px 0;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 20px; }
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* Main content */
+main { padding: 48px 0 64px; }
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--action);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+h1 { font-size: 1.9rem; margin: 0 0 12px; }
+h2 { font-size: 1.3rem; margin: 40px 0 12px; }
+h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+
+p { margin: 0 0 16px; }
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 32px 0;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: 'JetBrains Mono', monospace;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.cta:hover { opacity: 0.9; }
+
+ul.plain { padding-left: 20px; }
+ul.plain li { margin-bottom: 8px; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0;
+  font-size: 0.85rem;
+  color: rgba(45,55,72,0.7);
+}
+
+/* Contact form */
+.form-group { margin-bottom: 16px; }
+label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background: var(--bg);
+}
+button {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+#form-status {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+}
