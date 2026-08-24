@@ -4,32 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Nathan Omanga Ndjekondo</title>
+<meta name="description" content="Contact Nathan Omanga Ndjekondo — Flight Dispatch trainee and General AI Fluency intern at FlyRank, based in Nairobi, Kenya.">
+<meta property="og:title" content="Contact — Nathan Omanga Ndjekondo">
+<meta property="og:description" content="Get in touch with Nathan Omanga Ndjekondo, Flight Dispatch trainee based in Nairobi, Kenya.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav>
-  <div class="container">
-    <a href="index.html" class="logo">[&#9992;&#65039; FD]</a>
-    <div class="nav-links">
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="index.html">[&#9992;&#65039; FD]</a>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-    </div>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
   </div>
-</nav>
-
+</header>
 <main>
-  <div class="container">
-    <div class="eyebrow">Contact</div>
-    <h1>Contact Nathan</h1>
-    <p>Nairobi, Kenya &middot; nathanomanga70@gmail.com &middot; +254 114832592</p>
-    <p><a href="https://linkedin.com/in/nathan-omanga">linkedin.com/in/nathan-omanga</a></p>
+  <section class="section-dark">
+    <p class="eyebrow">Contact</p>
+    <h1>Get in touch</h1>
+    <p>Phone: +254 114832592 &nbsp;·&nbsp; Email: nathanomanga70@gmail.com &nbsp;·&nbsp; Location: Nairobi, Kenya</p>
+  </section>
 
-    <hr class="rule">
-
+  <section class="section-light">
     <form id="contact-form" action="https://formspree.io/f/xbgrpjjk" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
@@ -46,14 +48,9 @@
       <button type="submit">Send Message</button>
       <p id="form-status"></p>
     </form>
-  </div>
+  </section>
 </main>
-
-<footer>
-  <div class="container">
-    &copy; 2026 Nathan Omanga Ndjekondo
-  </div>
-</footer>
+<footer>&copy; 2026 NATHAN OMANGA NDJEKONDO</footer>
 
 <script>
 const form = document.getElementById('contact-form');
@@ -79,6 +76,5 @@ form.addEventListener('submit', async (e) => {
   }
 });
 </script>
-
 </body>
 </html>
