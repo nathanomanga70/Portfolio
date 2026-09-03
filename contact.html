@@ -29,36 +29,37 @@
 </header>
 <main>
   <section class="section-dark">
-    <p class="eyebrow">Contact</p>
-    <h1>Get in touch</h1>
-    <p>Phone: +254 114832592 &nbsp;·&nbsp; Email: nathanomanga70@gmail.com &nbsp;·&nbsp; Location: Nairobi, Kenya</p>
+    <div class="inner">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch</h1>
+      <p>Phone: +254 114832592 &nbsp;·&nbsp; Email: nathanomanga70@gmail.com &nbsp;·&nbsp; Location: Nairobi, Kenya</p>
+    </div>
   </section>
-
   <section class="section-light">
-    <form id="contact-form" action="https://formspree.io/f/xbgrpjjk" method="POST">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-      <p id="form-status"></p>
-    </form>
+    <div class="inner">
+      <form id="contact-form" action="https://formspree.io/f/xbgrpjjk" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+    </div>
   </section>
 </main>
-<footer>&copy; 2026 NATHAN OMANGA NDJEKONDO</footer>
-
+<footer>&copy; 2026 NATHAN OMANGA NDJEKONDO &middot; <a href="https://www.linkedin.com/in/nathan-omanga/" target="_blank" rel="noopener">LinkedIn</a></footer>
 <script>
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
-
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(form);
