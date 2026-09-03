@@ -65,9 +65,15 @@ nav a:hover, nav a.active {
   color: var(--paper);
 }
 
-main { max-width: 900px; margin: 0 auto; }
+main { width: 100%; }
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 .section-dark, .section-light {
+  width: 100%;
   padding: 56px 24px;
 }
 .section-dark { background: var(--ink); color: var(--paper); }
