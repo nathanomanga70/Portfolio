@@ -15,6 +15,35 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
+<style>
+  .hero-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-flex img {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    flex-shrink: 0;
+  }
+  .hero-flex-text {
+    flex: 1;
+    min-width: 260px;
+  }
+  @media (max-width: 640px) {
+    .hero-flex {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-flex img {
+      width: 160px;
+      margin: 0 auto;
+    }
+  }
+</style>
 </head>
 <body>
 <header>
@@ -32,12 +61,16 @@
 <main>
   <section class="section-dark">
     <p class="eyebrow">Home</p>
-    <h1>Flight Dispatcher. AI-Fluent. Precision-Driven.</h1>
-    <p>Nathan Omanga Ndjekondo — trained in aviation operations, building applied AI tools for flight dispatch.</p>
-    <p style="font-size:0.9rem;">Currently seeking a Flight Dispatch trainee / entry-level position — open to opportunities in aviation operations.</p>
-    <a class="cta" href="contact.html">Contact Nathan</a>
+    <div class="hero-flex">
+      <img src="nathan-headshot.jpg" alt="Nathan Omanga Ndjekondo">
+      <div class="hero-flex-text">
+        <h1>Flight Dispatcher. AI-Fluent. Precision-Driven.</h1>
+        <p>Nathan Omanga Ndjekondo — trained in aviation operations, building applied AI tools for flight dispatch.</p>
+        <p style="font-size:0.9rem;">Currently seeking a Flight Dispatch trainee / entry-level position — open to opportunities in aviation operations.</p>
+        <a class="cta" href="contact.html">Contact Nathan</a>
+      </div>
+    </div>
   </section>
-
   <section class="section-light">
     <p class="eyebrow">Quick Overview</p>
     <div class="row">
@@ -62,7 +95,6 @@
       <a href="skills.html" class="row-arrow">&#8594;</a>
     </div>
   </section>
-
   <section class="section-dark">
     <p class="eyebrow">Latest Projects</p>
     <div class="row">
