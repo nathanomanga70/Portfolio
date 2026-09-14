@@ -29,8 +29,16 @@
   }
   .section-dark .cert-card { border-color: var(--line-on-dark); background: #141414; }
   .section-light .cert-card { border-color: var(--line-on-light); background: #fff; }
+  .cert-thumb-link { display: block; }
+  .cert-thumb-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
   .cert-thumb {
-    height: 150px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +64,7 @@
     width: fit-content;
   }
   .cert-status.available { background: rgba(46,125,50,0.15); color: #2e7d32; border: 1px solid rgba(46,125,50,0.4); }
-  .cert-status.progress { background: rgba(153,153,153,0.15); color: #999; border: 1px solid rgba(153,153,153,0.4); }
+  .cert-status.pending { background: rgba(180,130,20,0.15); color: #b48214; border: 1px solid rgba(180,130,20,0.4); }
   .cert-issuer {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.68rem;
@@ -72,9 +80,23 @@
     font-size: 1rem;
     margin: 0 0 8px;
   }
-  .cert-desc { font-size: 0.82rem; margin: 0 0 12px; }
+  .cert-desc { font-size: 0.82rem; margin: 0 0 14px; flex: 1; }
   .section-dark .cert-desc { color: #aaa; }
   .section-light .cert-desc { color: #666; }
+  .cert-link {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    width: fit-content;
+  }
+  .section-dark .cert-link { background: var(--paper); color: var(--ink); }
+  .section-light .cert-link { background: var(--ink); color: var(--paper); }
+  .cert-link:hover { opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -96,47 +118,79 @@
     <div class="inner">
       <p class="eyebrow">Certificates</p>
       <h1>Certificates &amp; Credentials</h1>
-      <p>Formal training and internship certifications completed as part of my path into flight dispatch and applied AI.</p>
+      <p>Formal training and internship certifications, ordered from most to least recently obtained. The Flight Operations/Dispatch diploma and certificate have both been successfully completed — the physical documents are pending delivery from Kenya Aeronautical College.</p>
 
       <div class="cert-grid">
 
         <div class="cert-card">
-          <div class="cert-thumb">Certificate image<br>coming soon</div>
+          <a class="cert-thumb-link" href="certificate-flyrank.pdf" target="_blank" rel="noopener">
+            <img class="cert-thumb-img" src="certificate-flyrank-thumb.jpg" alt="FlyRank AI Fluency Certificate of Completion">
+          </a>
           <div class="cert-body">
             <span class="cert-status available">Available</span>
-            <p class="cert-issuer">FlyRank Corp. &middot; Aug 2026</p>
+            <p class="cert-issuer">FlyRank Corp. &middot; Sep 2026</p>
             <h3 class="cert-title">General AI Fluency Internship — Certificate of Completion</h3>
-            <p class="cert-desc">Completed an 8-week General AI Fluency internship applying AI tools to real aviation dispatch tasks, culminating in the AI-Powered NOTAM/METAR/TAF Briefing Assistant capstone.</p>
+            <p class="cert-desc">Completed the AI Fluency Internship Program at FlyRank (Jul&ndash;Sep 2026), applying AI tools to real aviation dispatch tasks and culminating in the AI-Powered NOTAM/METAR/TAF Briefing Assistant capstone.</p>
+            <a class="cert-link" href="certificate-flyrank.pdf" target="_blank" rel="noopener">View Certificate</a>
           </div>
         </div>
 
         <div class="cert-card">
-          <div class="cert-thumb">Certificate image<br>coming soon</div>
+          <div class="cert-thumb">Certificate<br>pending delivery</div>
           <div class="cert-body">
-            <span class="cert-status available">Available</span>
-            <p class="cert-issuer">Zinga College, Muanda, DRC &middot; 2019</p>
-            <h3 class="cert-title">State High School Diploma — Biochemistry</h3>
-            <p class="cert-desc">State-recognized secondary diploma with a Biochemistry specialization, forming the academic foundation before pursuing flight operations training.</p>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-thumb">Not yet issued</div>
-          <div class="cert-body">
-            <span class="cert-status progress">In progress</span>
-            <p class="cert-issuer">Kenya Aeronautical College &middot; Sep 2025 – Mar 2026</p>
-            <h3 class="cert-title">Certificate in Flight Operations / Dispatch</h3>
-            <p class="cert-desc">Training in flight planning, METAR/TAF interpretation, NOTAM analysis, and ICAO regulatory compliance. Certificate pending issuance.</p>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-thumb">Not yet issued</div>
-          <div class="cert-body">
-            <span class="cert-status progress">In progress</span>
+            <span class="cert-status pending">Completed — Pending Certificate</span>
             <p class="cert-issuer">Kenya Aeronautical College &middot; May – Jul 2026</p>
             <h3 class="cert-title">Diploma in Flight Operations / Dispatch</h3>
-            <p class="cert-desc">Advanced diploma building on the certificate program, covering operational decision-making and dispatch procedures. Diploma pending issuance.</p>
+            <p class="cert-desc">Advanced diploma building on the certificate program, covering operational decision-making and dispatch procedures. Coursework and exams successfully completed; a recommendation letter for internships was also issued. Physical diploma pending delivery.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-thumb">Certificate<br>pending delivery</div>
+          <div class="cert-body">
+            <span class="cert-status pending">Completed — Pending Certificate</span>
+            <p class="cert-issuer">Kenya Aeronautical College &middot; Sep 2025 – Mar 2026</p>
+            <h3 class="cert-title">Certificate in Flight Operations / Dispatch</h3>
+            <p class="cert-desc">Training in flight planning, METAR/TAF interpretation, NOTAM analysis, and ICAO regulatory compliance. Successfully completed; physical certificate pending delivery.</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb-link" href="certificate-attestation.pdf" target="_blank" rel="noopener">
+            <img class="cert-thumb-img" src="certificate-attestation-thumb.jpg" alt="Attestation de Fréquentation — Law Degree, University of Kinshasa">
+          </a>
+          <div class="cert-body">
+            <span class="cert-status available">Available</span>
+            <p class="cert-issuer">University of Kinshasa, DRC &middot; 2022–2023</p>
+            <h3 class="cert-title">Attestation de Fréquentation — First Year, Law Degree (LMD)</h3>
+            <p class="cert-desc">Official attestation confirming enrollment and completion of the first year of the Law Degree (LMD) program, Faculty of Law, University of Kinshasa, academic year 2022–2023.</p>
+            <a class="cert-link" href="certificate-attestation.pdf" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb-link" href="certificate-diplome-etat.pdf" target="_blank" rel="noopener">
+            <img class="cert-thumb-img" src="certificate-diplome-thumb.jpg" alt="Diplôme d'État — Section Scientifique, Option Chimie-Biologie">
+          </a>
+          <div class="cert-body">
+            <span class="cert-status available">Available</span>
+            <p class="cert-issuer">Ministry of Primary, Secondary &amp; Vocational Education, DRC &middot; Jul 2019</p>
+            <h3 class="cert-title">Diplôme d'État — Scientific Section, Chemistry-Biology Option</h3>
+            <p class="cert-desc">State diploma for the completion of long-cycle secondary studies, scientific section with a chemistry-biology specialization, awarded in Kinshasa.</p>
+            <a class="cert-link" href="certificate-diplome-etat.pdf" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <a class="cert-thumb-link" href="certificate-primaires.jpg" target="_blank" rel="noopener">
+            <img class="cert-thumb-img" src="certificate-primaires-thumb.jpg" alt="Certificat de Fin d'Études Primaires">
+          </a>
+          <div class="cert-body">
+            <span class="cert-status available">Available</span>
+            <p class="cert-issuer">Ministry of Primary, Secondary &amp; Vocational Education, DRC &middot; Jul 2013</p>
+            <h3 class="cert-title">Certificat de Fin d'Études Primaires</h3>
+            <p class="cert-desc">State certificate confirming completion of the primary education cycle, awarded in Kinshasa.</p>
+            <a class="cert-link" href="certificate-primaires.jpg" target="_blank" rel="noopener">View Certificate</a>
           </div>
         </div>
 
