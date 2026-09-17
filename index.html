@@ -33,6 +33,27 @@
     flex: 1;
     min-width: 260px;
   }
+  .hero-greeting {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0 0 6px;
+  }
+  .hero-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    color: var(--paper);
+  }
+  .hero-role {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #ccc;
+    margin: 0 0 16px;
+  }
   @media (max-width: 640px) {
     .hero-flex {
       flex-direction: column;
@@ -41,6 +62,9 @@
     .hero-flex img {
       width: 160px;
       margin: 0 auto;
+    }
+    .hero-name {
+      font-size: 1.5rem;
     }
   }
 </style>
@@ -66,7 +90,9 @@
       <div class="hero-flex">
         <img src="nathan-headshot.jpg" alt="Nathan Omanga Ndjekondo">
         <div class="hero-flex-text">
-          <h1>Flight Dispatcher. AI-Fluent. Precision-Driven.</h1>
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Nathan OMANGA NDJEKONDO</h1>
+          <p class="hero-role">Flight Dispatcher. AI-Fluent. Precision-Driven.</p>
           <p>Nathan Omanga Ndjekondo — trained in aviation operations, building applied AI tools for flight dispatch.</p>
           <p style="font-size:0.9rem;">Currently seeking a Flight Dispatch trainee / entry-level position — open to opportunities in aviation operations.</p>
           <a class="cta" href="contact.html">Contact Nathan</a>
