@@ -49,6 +49,36 @@ header {
   text-decoration: none;
 }
 
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.logo-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--paper);
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+}
+
 nav a {
   font-family: 'JetBrains Mono', monospace;
   color: #aaa;
@@ -176,6 +206,13 @@ footer {
   letter-spacing: 1px;
   background: var(--ink);
   color: #777;
+}
+footer a {
+  color: #999;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: var(--paper);
 }
 
 /* Contact form */
