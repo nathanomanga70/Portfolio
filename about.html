@@ -4,15 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Nathan Omanga Ndjekondo</title>
-<meta name="description" content="About Nathan Omanga Ndjekondo — Flight Operations and Dispatch trainee from Kenya Aeronautical College, building precision and analytical judgment for operational decision-making.">
+<meta name="description" content="About Nathan Omanga Ndjekondo — Flight Operations and Dispatch graduate from Kenya Aeronautical College, building precision and analytical judgment for operational decision-making.">
 <meta property="og:title" content="About — Nathan Omanga Ndjekondo">
-<meta property="og:description" content="Flight Operations and Dispatch trainee from Kenya Aeronautical College.">
+<meta property="og:description" content="Flight Operations and Dispatch graduate from Kenya Aeronautical College.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
+<style>
+  .about-hero {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .about-photo {
+    width: 260px;
+    flex-shrink: 0;
+  }
+  .about-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  .about-text { flex: 1; min-width: 280px; }
+  .about-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    color: var(--paper);
+  }
+  .about-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #999;
+    margin: 0 0 20px;
+  }
+  .about-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .pillar-card {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 22px 20px;
+  }
+  .section-light .pillar-card { border-color: var(--line-on-light); background: #fff; }
+  .pillar-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin: 0 0 10px;
+  }
+  .pillar-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .pillar-desc { font-size: 0.85rem; color: #555; margin: 0; }
+
+  @media (max-width: 640px) {
+    .about-hero { flex-direction: column; align-items: center; text-align: center; }
+    .about-photo { width: 200px; }
+    .about-cta-row { justify-content: center; }
+  }
+</style>
 </head>
 <body>
 <header>
@@ -31,13 +100,52 @@
 <main>
   <section class="section-dark">
     <div class="inner">
-      <p class="eyebrow">About</p>
-      <h1>Profile</h1>
-      <p>I am a Flight Operations and Dispatch trainee with a solid foundation in flight planning, meteorology interpretation, and aviation regulation. My work is built on precision: reading a METAR correctly, tracking a NOTAM that actually affects a flight, and knowing when a number needs a second check rather than a guess. Alongside this technical base, I have spent the past months building fluency in applying AI tools to real dispatch tasks — not as a novelty, but as a way to compress hours of manual triage into a process a human can still fully verify and stand behind.</p>
-      <a class="cta" href="contact.html">Contact Nathan</a>
+      <p class="eyebrow">About me</p>
+      <div class="about-hero">
+        <div class="about-photo">
+          <img src="nathan-about-photo.jpg" alt="Nathan Omanga Ndjekondo">
+        </div>
+        <div class="about-text">
+          <h1 class="about-name">Nathan Omanga Ndjekondo</h1>
+          <p class="about-role">Flight Dispatcher &middot; General AI Fluency Intern</p>
+          <p>I'm a Flight Operations and Dispatch graduate with a solid foundation in flight planning, meteorology interpretation, and aviation regulation. My work is built on precision: reading a METAR correctly, tracking a NOTAM that actually affects a flight, and knowing when a number needs a second check rather than a guess.</p>
+          <p>Alongside this technical base, I've spent the past months building fluency in applying AI tools to real dispatch tasks — not as a novelty, but as a way to compress hours of manual triage into a process a human can still fully verify and stand behind. My capstone project, an AI-powered NOTAM/METAR/TAF briefing assistant, is a direct product of that work.</p>
+          <p>I'm particularly interested in the space between operational judgment and applied AI — understanding where automation genuinely helps a dispatcher move faster, and where it must explicitly step back and flag uncertainty rather than guess.</p>
+          <p>Outside of aviation and AI, I've spent several years contributing to youth-focused and humanitarian initiatives across the Democratic Republic of Congo and internationally, work that shaped how I think about responsibility, communication, and operating under real constraints.</p>
+          <div class="about-cta-row">
+            <a class="cta" href="certificates.html">View Certificates</a>
+            <a class="cta" href="contact.html">Contact Nathan</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
   <section class="section-light">
+    <div class="inner">
+      <p class="eyebrow">What I bring to the table</p>
+      <h2 style="margin-top:0;">Precision, applied AI, and safety-first judgment</h2>
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <p class="pillar-num">01</p>
+          <h3 class="pillar-title">Precision &amp; Operational Judgment</h3>
+          <p class="pillar-desc">Flight planning, METAR/TAF interpretation, NOTAM analysis, and ICAO regulatory compliance, grounded in the discipline of getting the read right the first time.</p>
+        </div>
+        <div class="pillar-card">
+          <p class="pillar-num">02</p>
+          <h3 class="pillar-title">Applied AI Fluency</h3>
+          <p class="pillar-desc">Designing, testing, and iterating AI-assisted workflows for real dispatch tasks — prompt engineering treated as an engineering discipline, not a one-off trick.</p>
+        </div>
+        <div class="pillar-card">
+          <p class="pillar-num">03</p>
+          <h3 class="pillar-title">Safety-First Systems Thinking</h3>
+          <p class="pillar-desc">Applying aviation safety culture — flag uncertainty rather than guess — to how AI tools are scoped, bounded, and handed off for human review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
     <div class="inner">
       <p class="eyebrow">Education</p>
       <div class="row">
