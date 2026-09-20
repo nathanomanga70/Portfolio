@@ -45,9 +45,11 @@
     flex-wrap: wrap;
   }
   .hero-flex img {
-    width: 200px;
-    height: auto;
-    border-radius: 6px;
+    width: 280px;
+    height: 340px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
     display: block;
     flex-shrink: 0;
   }
@@ -143,7 +145,7 @@
 
   @media (max-width: 640px) {
     .hero-flex { flex-direction: column; text-align: center; }
-    .hero-flex img { width: 160px; margin: 0 auto; }
+    .hero-flex img { width: 220px; height: 260px; margin: 0 auto; }
     .cta-row, .chip-row { justify-content: center; }
     .about-teaser { flex-direction: column; text-align: center; }
   }
