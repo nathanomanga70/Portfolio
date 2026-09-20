@@ -4,18 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nathan Omanga Ndjekondo — Flight Dispatch × AI Fluency</title>
-<meta name="description" content="Nathan Omanga Ndjekondo — Flight Dispatch trainee and General AI Fluency intern at FlyRank, building applied AI tools for aviation operations including a NOTAM/METAR/TAF briefing assistant.">
+<meta name="description" content="Nathan Omanga Ndjekondo — Flight Dispatch graduate and General AI Fluency intern at FlyRank, building applied AI tools for aviation operations including a NOTAM/METAR/TAF briefing assistant.">
 <meta property="og:title" content="Nathan Omanga Ndjekondo — Flight Dispatch × AI Fluency">
-<meta property="og:description" content="Flight Dispatch trainee and General AI Fluency intern at FlyRank, building applied AI tools for aviation operations.">
+<meta property="og:description" content="Flight Dispatch graduate and General AI Fluency intern at FlyRank, building applied AI tools for aviation operations.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nathan Omanga Ndjekondo — Flight Dispatch × AI Fluency">
-<meta name="twitter:description" content="Flight Dispatch trainee and General AI Fluency intern at FlyRank, building applied AI tools for aviation operations.">
+<meta name="twitter:description" content="Flight Dispatch graduate and General AI Fluency intern at FlyRank, building applied AI tools for aviation operations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 <style>
+  /* Hero */
+  .badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ccc;
+    border: 1px solid var(--line-on-dark);
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin-bottom: 22px;
+  }
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4caf50;
+    display: inline-block;
+  }
   .hero-flex {
     display: flex;
     align-items: center;
@@ -29,43 +51,101 @@
     display: block;
     flex-shrink: 0;
   }
-  .hero-flex-text {
-    flex: 1;
-    min-width: 260px;
-  }
-  .hero-greeting {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    color: #999;
-    margin: 0 0 6px;
-  }
+  .hero-flex-text { flex: 1; min-width: 280px; }
   .hero-name {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 1.9rem;
     line-height: 1.2;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: var(--paper);
   }
   .hero-role {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 1.15rem;
-    color: #ccc;
-    margin: 0 0 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #999;
+    margin: 0 0 18px;
   }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.5px;
+    color: #bbb;
+    border: 1px solid var(--line-on-dark);
+    border-radius: 4px;
+    padding: 6px 10px;
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+  /* Stats */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 24px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0;
+  }
+
+  /* Pillars */
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .pillar-card {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 22px 20px;
+  }
+  .section-dark .pillar-card { border-color: var(--line-on-dark); background: #141414; }
+  .pillar-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.98rem;
+    margin: 0 0 8px;
+  }
+  .pillar-desc { font-size: 0.83rem; margin: 0; }
+  .section-dark .pillar-desc { color: #999; }
+
+  /* About teaser */
+  .about-teaser {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .about-teaser img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+  .about-teaser-text { flex: 1; min-width: 240px; }
+
   @media (max-width: 640px) {
-    .hero-flex {
-      flex-direction: column;
-      text-align: center;
-    }
-    .hero-flex img {
-      width: 160px;
-      margin: 0 auto;
-    }
-    .hero-name {
-      font-size: 1.5rem;
-    }
+    .hero-flex { flex-direction: column; text-align: center; }
+    .hero-flex img { width: 160px; margin: 0 auto; }
+    .cta-row, .chip-row { justify-content: center; }
+    .about-teaser { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
@@ -84,68 +164,123 @@
   </div>
 </header>
 <main>
+
+  <!-- HERO -->
   <section class="section-dark">
     <div class="inner">
-      <p class="eyebrow">Home</p>
+      <span class="badge-pill"><span class="badge-dot"></span>Available for Flight Dispatch opportunities</span>
       <div class="hero-flex">
         <img src="nathan-headshot.jpg" alt="Nathan Omanga Ndjekondo">
         <div class="hero-flex-text">
-          <p class="hero-greeting">Hello, I'm</p>
           <h1 class="hero-name">Nathan OMANGA NDJEKONDO</h1>
-          <p class="hero-role">Flight Dispatcher. AI-Fluent. Precision-Driven.</p>
-          <p>Nathan Omanga Ndjekondo — trained in aviation operations, building applied AI tools for flight dispatch.</p>
-          <p style="font-size:0.9rem;">Currently seeking a Flight Dispatch trainee / entry-level position — open to opportunities in aviation operations.</p>
-          <a class="cta" href="contact.html">Contact Nathan</a>
+          <p class="hero-role">Flight Dispatcher &middot; General AI Fluency Intern</p>
+          <p>Trained in aviation operations at Kenya Aeronautical College, building applied AI tools for flight dispatch — precision-first, human-verified, and grounded in real operational judgment.</p>
+          <div class="chip-row">
+            <span class="chip">General AI Fluency Intern — FlyRank AI</span>
+            <span class="chip">Flight Ops &amp; Dispatch — Kenya Aeronautical College</span>
+          </div>
+          <div class="cta-row">
+            <a class="cta" href="portfolio.html">View Portfolio</a>
+            <a class="cta" href="certificates.html">View Certificates</a>
+            <a class="cta" href="contact.html">Contact Nathan</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- STATS -->
   <section class="section-light">
     <div class="inner">
-      <p class="eyebrow">Quick Overview</p>
-      <div class="row">
+      <div class="stat-grid">
         <div>
-          <p class="row-title">About</p>
-          <p class="row-sub">Flight Dispatch trainee from Kenya Aeronautical College, building precision and analytical judgment for operational decision-making.</p>
+          <p class="stat-num">5</p>
+          <p class="stat-label">Test Cases Documented</p>
         </div>
-        <a href="about.html" class="row-arrow">&#8594;</a>
-      </div>
-      <div class="row">
         <div>
-          <p class="row-title">Portfolio</p>
-          <p class="row-sub">Led by FlyRank: General AI Fluency internship, including the AI-Powered NOTAM/METAR/TAF Briefing Assistant.</p>
+          <p class="stat-num">6</p>
+          <p class="stat-label">Prompt Iterations</p>
         </div>
-        <a href="portfolio.html" class="row-arrow">&#8594;</a>
-      </div>
-      <div class="row">
         <div>
-          <p class="row-title">Skills</p>
-          <p class="row-sub">Flight planning, METAR/TAF, NOTAM analysis, ICAO regulation, and applied AI workflow design.</p>
+          <p class="stat-num">3</p>
+          <p class="stat-label">MCP Tool Calls Demoed</p>
         </div>
-        <a href="skills.html" class="row-arrow">&#8594;</a>
+        <div>
+          <p class="stat-num">2026</p>
+          <p class="stat-label">FlyRank Internship</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- WHAT I BRING -->
   <section class="section-dark">
+    <div class="inner">
+      <p class="eyebrow">What I Bring</p>
+      <h2 style="margin-top:0;">Three disciplines, one operational mindset</h2>
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <h3 class="pillar-title">Precision &amp; Judgment</h3>
+          <p class="pillar-desc">Flight planning, METAR/TAF interpretation, NOTAM analysis, and ICAO regulatory compliance.</p>
+        </div>
+        <div class="pillar-card">
+          <h3 class="pillar-title">Applied AI Fluency</h3>
+          <p class="pillar-desc">Designing and iterating AI-assisted workflows for real dispatch tasks, prompt engineering as a discipline.</p>
+        </div>
+        <div class="pillar-card">
+          <h3 class="pillar-title">Safety-First Systems</h3>
+          <p class="pillar-desc">Flag uncertainty rather than guess — aviation safety culture applied to how AI tools are scoped and used.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST PROJECTS -->
+  <section class="section-light">
     <div class="inner">
       <p class="eyebrow">Latest Projects</p>
       <div class="row">
         <div>
-          <p class="row-title">FlyRank</p>
-          <p class="row-sub">General AI Fluency Internship (2026)</p>
+          <p class="row-title">FlyRank — General AI Fluency Internship</p>
+          <p class="row-sub">AI-Powered NOTAM/METAR/TAF Briefing Assistant, prompt iteration ladder, and automation workflows (2026)</p>
         </div>
-        <span class="row-arrow">01</span>
+        <a href="portfolio.html" class="row-arrow">&#8594;</a>
       </div>
       <div class="row">
         <div>
           <p class="row-title">UN Volunteers / UNHCR</p>
           <p class="row-sub">Online Volunteer, World Refugee Day (2026)</p>
         </div>
-        <span class="row-arrow">02</span>
+        <a href="portfolio.html" class="row-arrow">&#8594;</a>
       </div>
-      <a class="cta" href="portfolio.html">See Portfolio</a>
+      <a class="cta" href="portfolio.html">See Full Portfolio</a>
     </div>
   </section>
+
+  <!-- ABOUT TEASER -->
+  <section class="section-dark">
+    <div class="inner">
+      <p class="eyebrow">About Me</p>
+      <div class="about-teaser">
+        <img src="nathan-about-photo.jpg" alt="Nathan Omanga Ndjekondo">
+        <div class="about-teaser-text">
+          <p style="margin-bottom:12px;">A Flight Operations and Dispatch graduate building fluency in applying AI tools to real dispatch tasks — not as a novelty, but as a way to compress manual triage into a process a human can still fully verify.</p>
+          <a class="cta" href="about.html">Read Full Bio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-light">
+    <div class="inner" style="text-align:center;">
+      <p class="eyebrow" style="justify-content:center;">Let's Talk</p>
+      <h2 style="margin-top:0; color:var(--ink); opacity:1;">Open to Flight Dispatch trainee &amp; entry-level opportunities</h2>
+      <p style="margin:0 auto 16px; max-width:480px;">Based in Nairobi, Kenya — open to roles in aviation operations and applied AI.</p>
+      <a class="cta" href="contact.html">Contact Nathan</a>
+    </div>
+  </section>
+
 </main>
 <footer>&copy; 2026 NATHAN OMANGA NDJEKONDO &middot; <a href="https://www.linkedin.com/in/nathan-omanga/" target="_blank" rel="noopener">LinkedIn</a></footer>
 </body>
