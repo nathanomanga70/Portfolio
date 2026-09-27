@@ -22,7 +22,10 @@
 <header>
   <div class="nav-wrap">
     <a class="logo-wrap" href="index.html"><span class="logo-avatar">N</span><span class="logo-name">Nathan</span></a>
-    <nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="siteNav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
@@ -85,5 +88,6 @@ form.addEventListener('submit', async (e) => {
   }
 });
 </script>
+<script src="nav.js" defer></script>
 </body>
 </html>
