@@ -224,18 +224,29 @@ p { margin: 0 0 16px; max-width: 620px; }
   align-items: center;
   border-top: 1px solid;
   gap: 16px;
+  transition: background-color 0.2s ease;
 }
 .section-dark .row { border-color: var(--line-on-dark); }
 .section-light .row { border-color: var(--line-on-light); }
 .row:last-of-type { border-bottom: 1px solid; }
 .section-dark .row:last-of-type { border-color: var(--line-on-dark); }
 .section-light .row:last-of-type { border-color: var(--line-on-light); }
+.row:has(a.row-arrow):hover { cursor: pointer; }
+.section-dark .row:has(a.row-arrow):hover { background-color: rgba(255,255,255,0.04); }
+.section-light .row:has(a.row-arrow):hover { background-color: rgba(0,0,0,0.03); }
 
 .row-title { font-weight: 500; font-size: 0.95rem; margin: 0 0 4px; }
 .row-sub { font-size: 0.82rem; margin: 0; }
 .section-dark .row-sub { color: #999; }
 .section-light .row-sub { color: #777; }
-.row-arrow { font-size: 1.1rem; opacity: 0.5; flex-shrink: 0; }
+.row-arrow {
+  font-size: 1.1rem;
+  opacity: 0.5;
+  flex-shrink: 0;
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.row:hover .row-arrow { transform: translateX(4px); opacity: 0.9; }
 
 ul { padding-left: 20px; margin: 0 0 16px; }
 li { margin-bottom: 8px; }
@@ -324,8 +335,48 @@ button[type="submit"] {
 }
 .section-light .screenshot-caption { color: #999; }
 
+/* Hover lift for cards used across Certificates / About / Home */
+.cert-card, .pillar-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.cert-card:hover, .pillar-card:hover {
+  transform: translateY(-3px);
+}
+.section-dark .cert-card:hover, .section-dark .pillar-card:hover {
+  border-color: #555;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.45);
+}
+.section-light .cert-card:hover, .section-light .pillar-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Hover for skill/tag chips (Skills page + Home hero) */
+.chip {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.section-dark .chip:hover { border-color: #777; color: var(--paper); }
+.section-light .chip:hover { border-color: #999; background: #f0f0f0; }
+
+/* Certificate thumbnail — subtle zoom on hover to signal it's clickable */
+.cert-thumb-img { transition: transform 0.3s ease; }
+.cert-thumb-link:hover .cert-thumb-img { transform: scale(1.03); }
+
 @media (max-width: 480px) {
   h1 { font-size: 1.6rem; }
   nav a { margin-left: 0; padding: 8px 6px; font-size: 0.65rem; }
   .section-dark, .section-light { padding: 40px 20px; }
 }
+
+/* Keyboard accessibility — visible focus ring on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.nav-toggle:focus-visible,
+.cert-thumb-link:focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
