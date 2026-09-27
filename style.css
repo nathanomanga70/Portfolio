@@ -380,3 +380,22 @@ textarea:focus-visible,
   border-radius: 2px;
 }
 
+/* Scroll fade-in — only applied once reveal.js confirms JS is running,
+   so content always displays normally if JS fails or is disabled. */
+main > section.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+main > section.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  main > section.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
