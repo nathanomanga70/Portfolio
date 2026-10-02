@@ -19,151 +19,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="favicon-16.png" sizes="16x16">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<style>
-  /* Hero */
-  .badge-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ccc;
-    border: 1px solid var(--line-on-dark);
-    border-radius: 20px;
-    padding: 6px 14px;
-    margin-bottom: 22px;
-  }
-  .badge-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #4caf50;
-    display: inline-block;
-  }
-  .hero-flex {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  .hero-flex img {
-    width: 360px;
-    height: 440px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 8px;
-    display: block;
-    flex-shrink: 0;
-  }
-  .hero-flex-text { flex: 1; min-width: 280px; }
-  .hero-greeting {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    color: #999;
-    margin: 0 0 6px;
-  }
-  .hero-name {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.9rem;
-    line-height: 1.2;
-    margin: 0 0 8px;
-    color: var(--paper);
-  }
-  .hero-role {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    color: #999;
-    margin: 0 0 18px;
-  }
-  .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
-  .chip {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.5px;
-    color: #bbb;
-    border: 1px solid var(--line-on-dark);
-    border-radius: 4px;
-    padding: 6px 10px;
-  }
-  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
-
-  /* Stats */
-  .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 24px;
-    text-align: center;
-  }
-  .stat-num {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    margin: 0 0 4px;
-    color: var(--ink);
-  }
-  .stat-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #888;
-    margin: 0;
-  }
-
-  /* Pillars */
-  .pillar-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    margin-top: 8px;
-  }
-  .pillar-card {
-    border: 1px solid;
-    border-radius: 6px;
-    padding: 22px 20px;
-  }
-  .section-dark .pillar-card { border-color: var(--line-on-dark); background: #141414; }
-  .pillar-title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 0.98rem;
-    margin: 0 0 8px;
-  }
-  .pillar-desc { font-size: 0.83rem; margin: 0; }
-  .section-dark .pillar-desc { color: #999; }
-
-  /* About teaser */
-  .about-teaser {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .about-teaser img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 6px;
-    flex-shrink: 0;
-  }
-  .about-teaser-text { flex: 1; min-width: 240px; }
-
-  @media (max-width: 640px) {
-    .hero-flex { flex-direction: column; text-align: center; }
-    .hero-flex img { width: 260px; height: 320px; margin: 0 auto; }
-    .cta-row, .chip-row { justify-content: center; }
-    .about-teaser { flex-direction: column; text-align: center; }
-  }
-</style>
 </head>
 <body>
 <header>
@@ -194,7 +54,7 @@
           <h1 class="hero-name">Nathan OMANGA NDJEKONDO</h1>
           <p class="hero-role">Flight Dispatcher &middot; General AI Fluency Intern</p>
           <p>Trained in aviation operations at Kenya Aeronautical College, building applied AI tools for flight dispatch — precision-first, human-verified, and grounded in real operational judgment.</p>
-          <p style="font-size:0.9rem;">Currently seeking a Flight Dispatch trainee / entry-level position — open to opportunities in aviation operations.</p>
+          <p class="hero-seeking">Currently seeking a Flight Dispatch trainee / entry-level position — open to opportunities in aviation operations.</p>
           <div class="cta-row">
             <a class="cta" href="portfolio.html">View Portfolio</a>
             <a class="cta" href="certificates.html">View Certificates</a>
@@ -210,15 +70,15 @@
     <div class="inner">
       <div class="stat-grid">
         <div>
-          <p class="stat-num">5</p>
+          <p class="stat-num" data-count="5">5</p>
           <p class="stat-label">Test Cases Documented</p>
         </div>
         <div>
-          <p class="stat-num">6</p>
+          <p class="stat-num" data-count="6">6</p>
           <p class="stat-label">Prompt Iterations</p>
         </div>
         <div>
-          <p class="stat-num">3</p>
+          <p class="stat-num" data-count="3">3</p>
           <p class="stat-label">MCP Tool Calls Demoed</p>
         </div>
         <div>
@@ -233,7 +93,7 @@
   <section class="section-dark">
     <div class="inner">
       <p class="eyebrow">What I Bring</p>
-      <h2 style="margin-top:0;">Three disciplines, one operational mindset</h2>
+      <h2 class="section-title-first">Three disciplines, one operational mindset</h2>
       <div class="pillar-grid">
         <div class="pillar-card">
           <h3 class="pillar-title">Precision &amp; Judgment</h3>
@@ -280,7 +140,7 @@
       <div class="about-teaser">
         <img src="nathan-about-photo.jpg" alt="Nathan Omanga Ndjekondo">
         <div class="about-teaser-text">
-          <p style="margin-bottom:12px;">A Flight Operations and Dispatch graduate building fluency in applying AI tools to real dispatch tasks — not as a novelty, but as a way to compress manual triage into a process a human can still fully verify.</p>
+          <p class="about-text-p">A Flight Operations and Dispatch graduate building fluency in applying AI tools to real dispatch tasks — not as a novelty, but as a way to compress manual triage into a process a human can still fully verify.</p>
           <a class="cta" href="about.html">Read Full Bio</a>
         </div>
       </div>
@@ -289,10 +149,10 @@
 
   <!-- FINAL CTA -->
   <section class="section-light">
-    <div class="inner" style="text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">Let's Talk</p>
-      <h2 style="margin-top:0; color:var(--ink); opacity:1;">Open to Flight Dispatch trainee &amp; entry-level opportunities</h2>
-      <p style="margin:0 auto 16px; max-width:480px;">Based in Nairobi, Kenya — open to roles in aviation operations and applied AI.</p>
+    <div class="inner center-block">
+      <p class="eyebrow eyebrow-center">Let's Talk</p>
+      <h2 class="cta-title">Open to Flight Dispatch trainee &amp; entry-level opportunities</h2>
+      <p class="cta-sub">Based in Nairobi, Kenya — open to roles in aviation operations and applied AI.</p>
       <a class="cta" href="contact.html">Contact Nathan</a>
     </div>
   </section>
@@ -301,5 +161,6 @@
 <footer>&copy; 2026 NATHAN OMANGA NDJEKONDO &middot; <a href="https://www.linkedin.com/in/nathan-omanga/" target="_blank" rel="noopener">LinkedIn</a></footer>
 <script src="nav.js" defer></script>
 <script src="reveal.js" defer></script>
+<script src="main.js" defer></script>
 </body>
 </html>
