@@ -1,0 +1,91 @@
+/* contact.css — extra styles for the contact form */
+
+.contact-line a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-line a:hover { opacity: 0.8; }
+.contact-line a:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Honeypot field (hidden from humans, catches spam bots) */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Field validation */
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-color: #c62828;
+  box-shadow: 0 0 0 1px #c62828;
+}
+.form-group input.valid,
+.form-group textarea.valid {
+  border-color: #2e7d32;
+}
+.field-error {
+  display: block;
+  min-height: 1.1em;
+  margin: 6px 0 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.3px;
+  color: #c62828;
+}
+
+/* Character counter */
+.char-count {
+  display: block;
+  margin-top: 6px;
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #888;
+}
+.char-count.near-limit { color: #e65100; }
+
+/* Submit button states */
+#contact-form button[type="submit"] {
+  transition: opacity 0.2s, transform 0.2s;
+}
+#contact-form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+#contact-form button[type="submit"]:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Status message */
+#form-status {
+  margin: 14px 0 0;
+  padding: 0;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+#form-status.success,
+#form-status.error {
+  padding: 10px 14px;
+}
+#form-status.success {
+  color: #1b5e20;
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+}
+#form-status.error {
+  color: #b71c1c;
+  background: #ffebee;
+  border: 1px solid #ef9a9a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #contact-form button[type="submit"] { transition: none; }
+}
