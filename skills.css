@@ -1,0 +1,99 @@
+/* skills.css — styles for skills.html */
+
+.skill-note {
+  font-size: 0.82rem;
+  margin: -8px 0 20px;
+}
+.section-dark .skill-note { color: #999; }
+.section-light .skill-note { color: #777; }
+
+.section-title-first { margin-top: 0; }
+.inline-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.inline-link:hover { opacity: 0.8; }
+
+/* Chips */
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.3px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
+}
+.section-dark .chip { border: 1px solid var(--line-on-dark); color: #ccc; }
+.section-light .chip { border: 1px solid var(--line-on-light); color: #444; background: #fff; }
+.chip:hover { transform: translateY(-1px); }
+
+/* Skill filter (added by skills.js) */
+.skill-filter {
+  margin: 0 0 28px;
+  max-width: 420px;
+}
+.skill-filter label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999;
+}
+.skill-filter input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #eee;
+  background: #141414;
+  border: 1px solid var(--line-on-dark);
+  border-radius: 4px;
+}
+.skill-filter input::placeholder { color: #777; }
+.skill-filter input:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+.filter-count {
+  min-height: 1.2em;
+  margin: 8px 0 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #999;
+}
+
+.chip.dimmed { opacity: 0.25; }
+.section-dark .chip.match { border-color: #4caf50; color: #fff; }
+.section-light .chip.match { border-color: #2e7d32; color: #000; }
+
+/* Focus for calls to action */
+.cta:focus-visible,
+.inline-link:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .chip { font-size: 0.68rem; padding: 7px 10px; }
+  .skill-filter { max-width: 100%; }
+}
+
+/* Print */
+@media print {
+  .skill-filter, nav, .nav-toggle { display: none !important; }
+  .chip.dimmed { opacity: 1 !important; }
+  .section-dark { background: #fff !important; color: #000 !important; }
+  .section-dark .chip { color: #000 !important; border-color: #999 !important; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .chip { transition: none; }
+  .chip:hover { transform: none; }
+}

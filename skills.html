@@ -15,28 +15,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="skills.css">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="favicon-16.png" sizes="16x16">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<style>
-  .skill-note {
-    font-size: 0.82rem;
-    margin: -8px 0 20px;
-  }
-  .section-dark .skill-note { color: #999; }
-  .section-light .skill-note { color: #777; }
-  .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
-  .chip {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.3px;
-    padding: 8px 12px;
-    border-radius: 4px;
-  }
-  .section-dark .chip { border: 1px solid var(--line-on-dark); color: #ccc; }
-  .section-light .chip { border: 1px solid var(--line-on-light); color: #444; background: #fff; }
-</style>
 </head>
 <body>
 <header>
@@ -62,7 +45,7 @@
       <h1>Technical Toolkit</h1>
       <p class="skill-note">Core aviation operations skills, backed by applied AI fluency used to strengthen how I work — not to replace it.</p>
 
-      <h2 style="margin-top:0;">Aviation Operations</h2>
+      <h2 class="section-title-first">Aviation Operations</h2>
       <div class="chip-row">
         <span class="chip">Flight Planning</span>
         <span class="chip">Weight &amp; Balance</span>
@@ -77,8 +60,8 @@
   <section class="section-light">
     <div class="inner">
       <p class="eyebrow">Applied to Dispatch Workflows</p>
-      <h2 style="margin-top:0;">AI &amp; Tools</h2>
-      <p class="skill-note">Used to accelerate NOTAM/METAR/TAF triage and documentation — see the <a href="portfolio.html" style="color:inherit;">Portfolio</a> for the working assistant and capstone report.</p>
+      <h2 class="section-title-first">AI &amp; Tools</h2>
+      <p class="skill-note">Used to accelerate NOTAM/METAR/TAF triage and documentation — see the <a href="portfolio.html" class="inline-link">Portfolio</a> for the working assistant and capstone report.</p>
       <div class="chip-row">
         <span class="chip">Claude — dispatch triage workflows</span>
         <span class="chip">Prompt Engineering</span>
@@ -116,5 +99,6 @@
 <footer>&copy; 2026 NATHAN OMANGA NDJEKONDO &middot; <a href="https://www.linkedin.com/in/nathan-omanga/" target="_blank" rel="noopener">LinkedIn</a></footer>
 <script src="nav.js" defer></script>
 <script src="reveal.js" defer></script>
+<script src="skills.js" defer></script>
 </body>
 </html>
