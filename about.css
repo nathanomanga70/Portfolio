@@ -1,0 +1,127 @@
+/* about.css — styles for about.html */
+
+.about-hero {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.about-photo {
+  width: 260px;
+  flex-shrink: 0;
+}
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.about-text { flex: 1; min-width: 280px; }
+.about-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 6px;
+  color: var(--paper);
+}
+.about-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #999;
+  margin: 0 0 20px;
+}
+.about-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+/* Pillars */
+.section-title-first { margin-top: 0; }
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+.pillar-card {
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 22px 20px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.section-light .pillar-card { border-color: var(--line-on-light); background: #fff; }
+.pillar-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #aaa;
+  margin: 0 0 10px;
+}
+.pillar-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.pillar-desc { font-size: 0.85rem; color: #555; margin: 0; }
+
+/* Read more / Read less (mobile only, added by about.js) */
+.read-more-btn {
+  display: none;
+  margin: 0 0 16px;
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  color: #ddd;
+  background: transparent;
+  border: 1px solid var(--line-on-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.read-more-btn:hover { background: #1c1c1c; }
+.read-more-btn:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+.about-text.collapsed .bio-extra { display: none; }
+
+/* Keyboard focus for calls to action */
+.cta:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about-hero { gap: 32px; }
+  .about-photo { width: 220px; }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .about-hero { flex-direction: column; align-items: center; text-align: center; }
+  .about-photo { width: 200px; }
+  .about-cta-row { justify-content: center; }
+  .about-name { font-size: 1.6rem; }
+  .read-more-btn { display: inline-block; }
+}
+
+/* Print */
+@media print {
+  .read-more-btn, nav, .nav-toggle, .about-cta-row { display: none !important; }
+  .about-text.collapsed .bio-extra { display: block !important; }
+  .section-dark { background: #fff !important; color: #000 !important; }
+  .about-name, .about-role { color: #000 !important; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pillar-card, .read-more-btn { transition: none; }
+  .pillar-card:hover { transform: none; }
+}
