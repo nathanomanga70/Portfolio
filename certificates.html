@@ -13,97 +13,14 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="certificates.css">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="favicon-16.png" sizes="16x16">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<style>
-  .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-top: 8px;
-  }
-  .cert-card {
-    border: 1px solid;
-    border-radius: 6px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .section-dark .cert-card { border-color: var(--line-on-dark); background: #141414; }
-  .section-light .cert-card { border-color: var(--line-on-light); background: #fff; }
-  .cert-thumb-link { display: block; }
-  .cert-thumb-img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-  }
-  .cert-thumb {
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 16px;
-  }
-  .section-dark .cert-thumb { background: #1a1a1a; color: #666; }
-  .section-light .cert-thumb { background: #ececec; color: #888; }
-  .cert-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; }
-  .cert-status {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    width: fit-content;
-  }
-  .cert-status.available { background: rgba(46,125,50,0.15); color: #2e7d32; border: 1px solid rgba(46,125,50,0.4); }
-  .cert-status.pending { background: rgba(180,130,20,0.15); color: #b48214; border: 1px solid rgba(180,130,20,0.4); }
-  .cert-issuer {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  .section-dark .cert-issuer { color: #888; }
-  .section-light .cert-issuer { color: #999; }
-  .cert-title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    margin: 0 0 8px;
-  }
-  .cert-desc { font-size: 0.82rem; margin: 0 0 14px; flex: 1; }
-  .section-dark .cert-desc { color: #aaa; }
-  .section-light .cert-desc { color: #666; }
-  .cert-link {
-    display: inline-block;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 3px;
-    width: fit-content;
-  }
-  .section-dark .cert-link { background: var(--paper); color: var(--ink); }
-  .section-light .cert-link { background: var(--ink); color: var(--paper); }
-  .cert-link:hover { opacity: 0.85; }
-</style>
 </head>
 <body>
 <header>
@@ -131,9 +48,9 @@
 
       <div class="cert-grid">
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="ai">
           <a class="cert-thumb-link" href="certificate-flyrank.pdf" target="_blank" rel="noopener">
-            <img class="cert-thumb-img" src="certificate-flyrank-thumb.jpg" alt="FlyRank AI Fluency Certificate of Completion">
+            <img class="cert-thumb-img" src="certificate-flyrank-thumb.jpg" alt="FlyRank AI Fluency Certificate of Completion" decoding="async">
           </a>
           <div class="cert-body">
             <span class="cert-status available">Available</span>
@@ -144,9 +61,9 @@
           </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="aviation">
           <a class="cert-thumb-link" href="recommendation-diploma.pdf" target="_blank" rel="noopener">
-            <img class="cert-thumb-img" src="recommendation-diploma-thumb.jpg" alt="Recommendation letter — Diploma in Flight Operations / Dispatch">
+            <img class="cert-thumb-img" src="recommendation-diploma-thumb.jpg" alt="Recommendation letter — Diploma in Flight Operations / Dispatch" decoding="async">
           </a>
           <div class="cert-body">
             <span class="cert-status pending">Completed — Pending Certificate</span>
@@ -157,9 +74,9 @@
           </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="aviation">
           <a class="cert-thumb-link" href="recommendation-certificate.pdf" target="_blank" rel="noopener">
-            <img class="cert-thumb-img" src="recommendation-certificate-thumb.jpg" alt="Recommendation letter — Certificate in Flight Operations / Dispatch">
+            <img class="cert-thumb-img" src="recommendation-certificate-thumb.jpg" alt="Recommendation letter — Certificate in Flight Operations / Dispatch" decoding="async">
           </a>
           <div class="cert-body">
             <span class="cert-status pending">Completed — Pending Certificate</span>
@@ -170,9 +87,9 @@
           </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="academic">
           <a class="cert-thumb-link" href="certificate-attestation.pdf" target="_blank" rel="noopener">
-            <img class="cert-thumb-img" src="certificate-attestation-thumb.jpg" alt="Attestation de Fréquentation — Law Degree, University of Kinshasa">
+            <img class="cert-thumb-img" src="certificate-attestation-thumb.jpg" alt="Attestation de Fréquentation — Law Degree, University of Kinshasa" loading="lazy" decoding="async">
           </a>
           <div class="cert-body">
             <span class="cert-status available">Available</span>
@@ -183,9 +100,9 @@
           </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="academic">
           <a class="cert-thumb-link" href="certificate-diplome-etat.pdf" target="_blank" rel="noopener">
-            <img class="cert-thumb-img" src="certificate-diplome-thumb.jpg" alt="Diplôme d'État — Section Scientifique, Option Chimie-Biologie">
+            <img class="cert-thumb-img" src="certificate-diplome-thumb.jpg" alt="Diplôme d'État — Section Scientifique, Option Chimie-Biologie" loading="lazy" decoding="async">
           </a>
           <div class="cert-body">
             <span class="cert-status available">Available</span>
@@ -196,9 +113,9 @@
           </div>
         </div>
 
-        <div class="cert-card">
+        <div class="cert-card" data-category="academic">
           <a class="cert-thumb-link" href="certificate-primaires.jpg" target="_blank" rel="noopener">
-            <img class="cert-thumb-img" src="certificate-primaires-thumb.jpg" alt="Certificat de Fin d'Études Primaires">
+            <img class="cert-thumb-img" src="certificate-primaires-thumb.jpg" alt="Certificat de Fin d'Études Primaires" loading="lazy" decoding="async">
           </a>
           <div class="cert-body">
             <span class="cert-status available">Available</span>
@@ -216,5 +133,6 @@
 <footer>&copy; 2026 NATHAN OMANGA NDJEKONDO &middot; <a href="https://www.linkedin.com/in/nathan-omanga/" target="_blank" rel="noopener">LinkedIn</a></footer>
 <script src="nav.js" defer></script>
 <script src="reveal.js" defer></script>
+<script src="certificates.js" defer></script>
 </body>
 </html>

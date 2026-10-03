@@ -1,0 +1,114 @@
+/* portfolio.css — styles for portfolio.html */
+
+/* Raw NOTAM/METAR/TAF sample (was an inline style) */
+.section-light .screenshot-placeholder.raw-input {
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  background: #1a1a1a;
+  color: #999;
+  padding: 20px;
+  border: none;
+  max-width: 560px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* Output figure */
+.figure-btn {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 24px auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.figure-img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 24px auto;
+  border-radius: 4px;
+}
+.figure-btn .figure-img { margin: 0; }
+.figure-btn:focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 4px;
+}
+
+/* Capstone review box (was inline styles) */
+.proof-box.review-box { margin-top: 32px; }
+.proof-box .review-quote {
+  margin: 10px 0 0;
+  font-style: italic;
+  color: inherit;
+}
+.proof-box .review-quote.spaced { margin-top: 18px; }
+.proof-box .review-cite {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  opacity: 0.85;
+  color: inherit;
+}
+
+/* Lightbox (created by portfolio.js) */
+dialog.lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: visible;
+}
+dialog.lightbox::backdrop { background: rgba(0, 0, 0, 0.85); }
+.lightbox-img {
+  display: block;
+  max-width: 95vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  cursor: zoom-out;
+}
+.lightbox-close {
+  display: block;
+  margin: 0 0 10px auto;
+  padding: 6px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #111;
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lightbox-close:hover { opacity: 0.85; }
+.lightbox-close:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Calls to action */
+.cta:focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .section-light .screenshot-placeholder.raw-input { font-size: 0.7rem; padding: 14px; }
+}
+
+@media print {
+  nav, .nav-toggle { display: none !important; }
+  .section-dark { background: #fff !important; color: #000 !important; }
+  .section-dark p, .section-dark .row-sub { color: #000 !important; }
+}

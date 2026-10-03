@@ -1,0 +1,146 @@
+/* certificates.css — styles for certificates.html */
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+.cert-card {
+  border: 1px solid;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.cert-card[hidden] { display: none; }
+.section-dark .cert-card { border-color: var(--line-on-dark); background: #141414; }
+.section-light .cert-card { border-color: var(--line-on-light); background: #fff; }
+.cert-thumb-link { display: block; }
+.cert-thumb-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.cert-thumb {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px;
+}
+.section-dark .cert-thumb { background: #1a1a1a; color: #999; }
+.section-light .cert-thumb { background: #ececec; color: #595959; }
+.cert-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; }
+.cert-status {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+.cert-status.available { background: rgba(76,175,80,0.15); color: #66bb6a; border: 1px solid rgba(76,175,80,0.45); }
+.cert-status.pending { background: rgba(217,168,58,0.15); color: #e0b04a; border: 1px solid rgba(217,168,58,0.45); }
+.section-light .cert-status.available { color: #2e7d32; }
+.section-light .cert-status.pending { color: #8a6200; }
+.cert-issuer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.section-dark .cert-issuer { color: #888; }
+.section-light .cert-issuer { color: #666; }
+.cert-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+.cert-desc { font-size: 0.82rem; margin: 0 0 14px; flex: 1; }
+.section-dark .cert-desc { color: #aaa; }
+.section-light .cert-desc { color: #666; }
+.cert-link {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  width: fit-content;
+}
+.section-dark .cert-link { background: var(--paper); color: var(--ink); }
+.section-light .cert-link { background: var(--ink); color: var(--paper); }
+.cert-link:hover { opacity: 0.85; }
+.cert-link:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* Category filter (created by certificates.js) */
+.cert-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 8px;
+}
+.cert-filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  color: #ccc;
+  background: transparent;
+  border: 1px solid var(--line-on-dark);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.cert-filter-btn:hover { border-color: #777; color: var(--paper); }
+.cert-filter-btn[aria-pressed="true"] {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.cert-filter-btn:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+.cert-filter-count {
+  min-height: 1.2em;
+  margin: 0 0 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #999;
+}
+
+@media (max-width: 480px) {
+  .cert-filter-btn { font-size: 0.65rem; padding: 7px 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-filter-btn { transition: none; }
+}
+
+@media print {
+  .cert-filters, .cert-filter-count, nav, .nav-toggle { display: none !important; }
+  .cert-card[hidden] { display: flex !important; }
+  .section-dark { background: #fff !important; color: #000 !important; }
+  .section-dark .cert-card { background: #fff !important; border-color: #999 !important; }
+  .section-dark p, .section-dark .cert-desc, .section-dark .cert-issuer { color: #000 !important; }
+}
