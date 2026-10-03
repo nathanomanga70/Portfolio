@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // do nothing — sections simply display normally, no animation.
   if (!('IntersectionObserver' in window)) return;
 
-  var sections = document.querySelectorAll('main > section');
-  if (!sections.length) return;
+  var all = document.querySelectorAll('main > section');
+  if (all.length < 2) return;
+
+  // The first section (hero) is above the fold: it must show immediately.
+  // Hiding it until the animation runs delays the Largest Contentful Paint.
+  var sections = Array.prototype.slice.call(all, 1);
 
   // Only now do we mark sections as "reveal" (hidden pre-animation state).
-  // This avoids any flash of invisible content if this script were ever slow to run.
   sections.forEach(function (el) {
     el.classList.add('reveal');
   });

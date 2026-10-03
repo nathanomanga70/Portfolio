@@ -69,12 +69,24 @@ function initBackToTop() {
   btn.innerHTML = '&uarr;';
   document.body.appendChild(btn);
 
+  /* Read scroll position inside requestAnimationFrame and never at startup:
+     reading window.scrollY right after a DOM change forces a reflow. */
+  var ticking = false;
+
   function toggle() {
     btn.classList.toggle('visible', window.scrollY > 400);
+    ticking = false;
   }
 
-  window.addEventListener('scroll', toggle, { passive: true });
-  toggle();
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(toggle);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  requestAnimationFrame(toggle);
 
   btn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
