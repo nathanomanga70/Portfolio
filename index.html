@@ -17,7 +17,8 @@
 <meta name="twitter:image" content="https://nathanomanga.co.ke/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="home.css">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -48,7 +49,7 @@
   <section class="section-dark">
     <div class="inner">
       <div class="hero-flex">
-        <img src="nathan-headshot.jpg" alt="Nathan Omanga Ndjekondo">
+        <img src="nathan-headshot.jpg" alt="Nathan Omanga Ndjekondo" width="360" height="440" fetchpriority="high" decoding="async">
         <div class="hero-flex-text">
           <p class="hero-greeting">Hi, I'm</p>
           <h1 class="hero-name">Nathan OMANGA NDJEKONDO</h1>
@@ -138,7 +139,7 @@
     <div class="inner">
       <p class="eyebrow">About Me</p>
       <div class="about-teaser">
-        <img src="nathan-about-photo.jpg" alt="Nathan Omanga Ndjekondo">
+        <img src="nathan-about-photo.jpg" alt="Nathan Omanga Ndjekondo" width="130" height="130" loading="lazy" decoding="async">
         <div class="about-teaser-text">
           <p class="about-text-p">A Flight Operations and Dispatch graduate building fluency in applying AI tools to real dispatch tasks — not as a novelty, but as a way to compress manual triage into a process a human can still fully verify.</p>
           <a class="cta" href="about.html">Read Full Bio</a>
@@ -153,14 +154,4 @@
       <p class="eyebrow eyebrow-center">Let's Talk</p>
       <h2 class="cta-title">Open to Flight Dispatch trainee &amp; entry-level opportunities</h2>
       <p class="cta-sub">Based in Nairobi, Kenya — open to roles in aviation operations and applied AI.</p>
-      <a class="cta" href="contact.html">Contact Nathan</a>
-    </div>
-  </section>
-
-</main>
-<footer>&copy; 2026 NATHAN OMANGA NDJEKONDO &middot; <a href="https://www.linkedin.com/in/nathan-omanga/" target="_blank" rel="noopener">LinkedIn</a></footer>
-<script src="nav.js" defer></script>
-<script src="reveal.js" defer></script>
-<script src="main.js" defer></script>
-</body>
-</html>
+      <a class="cta" href="contact.html">Co
