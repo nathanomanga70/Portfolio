@@ -86,6 +86,7 @@
 .section-dark .cert-link { background: var(--paper); color: var(--ink); }
 .section-light .cert-link { background: var(--ink); color: var(--paper); }
 .cert-link:hover { opacity: 0.85; }
+.cert-link + .cert-link { margin-top: 8px; }
 .cert-link:focus-visible {
   outline: 2px solid #4caf50;
   outline-offset: 3px;
