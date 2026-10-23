@@ -52,7 +52,9 @@
 }
 .cert-status.available { background: rgba(76,175,80,0.15); color: #66bb6a; border: 1px solid rgba(76,175,80,0.45); }
 .cert-status.pending { background: rgba(217,168,58,0.15); color: #e0b04a; border: 1px solid rgba(217,168,58,0.45); }
+.cert-status.request { background: rgba(120,144,180,0.15); color: #9db4d6; border: 1px solid rgba(120,144,180,0.45); }
 .section-light .cert-status.available { color: #2e7d32; }
+.section-light .cert-status.request { color: #3b5b8a; }
 .section-light .cert-status.pending { color: #8a6200; }
 .cert-issuer {
   font-family: 'JetBrains Mono', monospace;
